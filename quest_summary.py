@@ -117,7 +117,7 @@ text = text.replace('&', '%26amp;')
 
 def bot_sendtext(bot_message):
     ### Send text message
-    send_text = 'https://api.telegram.org/bot' + token + '/sendMessage?chat_id=' + chat_id + '&parse_mode=html&text=' + bot_message
+    send_text = 'https://api.telegram.org/bot' + token + '/sendMessage?chat_id=' + chat_id + '&disable_web_page_preview=true' + '&parse_mode=html&text=' + bot_message
     requests.get(send_text)
 
 bot_sendtext(text)
